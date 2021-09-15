@@ -10,15 +10,8 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {  
-  if (name == null || name.length < 4 ) {
-    console.log(2, name);
+  if (name == null || name.length < 4 || name.includes(' ') ) {
     return false;
-  }
-  for (let char of name) {
-    if (char == ' ') {
-      console.log(1);
-      return false;
-    }    
   }
   return true;
 }
