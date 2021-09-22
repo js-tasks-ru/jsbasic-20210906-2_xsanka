@@ -6,7 +6,7 @@ function camelize(str) {
     if (i === 0) {
       newStr = newStr + item;
     }
-    if (item != '' && i > 0) {      
+    if (i > 0) {      
       newItem = item[0].toUpperCase() + item.slice(1,item.length);
       newStr = newStr + newItem;     
     }
