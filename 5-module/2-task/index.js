@@ -5,10 +5,8 @@ function toggleText() {
   toggleTextButton.addEventListener('click',() => {    
     if(text.getAttribute('hidden') === ''){
       text.removeAttribute('hidden', '');
-      console.log('removeAttribute')
     } else {
       text.setAttribute('hidden', '');
-      console.log('setAttribute')
     }
   });
 
