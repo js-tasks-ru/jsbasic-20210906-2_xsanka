@@ -1,11 +1,13 @@
 function showSalary(users, age) {
-  let newUsers = '';
+  let newUsersStr = '';  
 
-  users.forEach (function(item, index) { 
-    if (item.age <= age) {      
-      newUsers = newUsers + item.name + ', ' + item.balance + ( (index == (users.length - 1) ) ? '' : '\n');
-    }    
+  let newUsers = users.filter(function(item) {
+    return item.age <= age;
+  });
+
+  newUsers.forEach(function(item, index) {
+    newUsersStr = newUsersStr + item.name + ', ' + item.balance + ( (index === newUsers.length - 1)  ? '' : '\n');  
   }) 
-
-  return newUsers;
+  
+  return newUsersStr;
 }
