@@ -1,8 +1,5 @@
 function camelize(str) {
-  let newStrArr = str.split('-'); //получили массив
-  let newStr = '';    
-
-  let newArr = newStrArr.map(function(item, i){
+  return str.split('-').map(function(item, i){
     if (i === 0) {      
       if (item === '') {
         return '';
@@ -12,13 +9,8 @@ function camelize(str) {
     } else {      
       let str = item[0].toUpperCase() + item.slice(1,item.length);      
       return str;
-    } 
-      
-  });  
-
-  newStr = newArr.join('');  
-
-  return newStr;
+    }      
+  }).join('');
 }
 
 // function camelize(str) {
