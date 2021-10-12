@@ -25,5 +25,3 @@ function makeFriendsList(friends) {
 
   return ul;
 }
-
-document.body.appendChild(makeFriendsList(friends));
