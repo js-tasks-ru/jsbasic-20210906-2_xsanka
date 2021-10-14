@@ -1,17 +1,23 @@
-/**
- * Компонент, который реализует таблицу
- * с возможностью удаления строк
- *
- * Пример одного элемента, описывающего строку таблицы
- *
- *      {
-     *          name: 'Ilia',
-     *          age: 25,
-     *          salary: '1000',
-     *          city: 'Petrozavodsk'
-     *      },
- *
- */
+//  function componentTemplate(rows) {
+//   return `
+//    <table>
+//       <tbody>
+//         ${rows.map(({name,age,salary,city}) => `<tr><td>${name}</td><td>${age}</td><td>${salary}</td><td>${city}</td><td><button>X</button></td></tr>`).join('')}
+//       </tbody>
+//    </table>
+//   `
+// }
+
+// export default class UserTable {
+//   elem = {};
+
+//   constructor(rows) {    
+//     this.template = componentTemplate(rows);
+//     console.log(this.template);
+//   }
+  
+// }
+
 export default class UserTable {
   constructor(rows) {
     this.elem = document.createElement('table');
